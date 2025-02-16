@@ -1,4 +1,3 @@
-using Microsoft.Extensions.DependencyInjection;
 using MovieWorld.Infra;
 using MovieWorld.Service;
 using MovieWorld.Service.Ioc;
@@ -19,6 +18,15 @@ services
     .AddScoped<IApiClientFactory, ApiClientFactory>()
     .AddScoped<IMovieService, MovieService>();
 
+services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,6 +35,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 
