@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MovieWorld.Infra.Models;
 using MovieWorld.Service.Models;
-using System.Net;
 
 namespace MovieWorld.Service.Ioc
 {

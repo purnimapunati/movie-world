@@ -53,8 +53,8 @@ public class MovieServiceTests
         Assert.NotNull(movieIds);
         Assert.Empty(movieIds);
     }
-    [Fact]
 
+    [Fact]
     public async Task GetMovieById_ShouldReturnMovieDetails_WhenProviderReturnsValidData()
     {
         _mockApiClientFactory.Setup(factory => factory.Get<MovieDetailsDto>(It.IsAny<MovieProviderType>(), It.IsAny<string>()))
@@ -66,19 +66,9 @@ public class MovieServiceTests
 
         Assert.NotNull(movie);
     }
+
     [Fact]
     public async Task GetMovieById_ShouldReturnMovieDetails_WhenProviderReturnsEmptyData()
-    {
-        _mockApiClientFactory.Setup(factory => factory.Get<MovieDetailsDto>(It.IsAny<MovieProviderType>(), It.IsAny<string>()))
-            .ReturnsAsync(
-            new MovieDetailsDto());
-
-        var movie = await _movieService.GetMovieById("1", MovieProviderType.Cinemaworld);
-
-        Assert.NotNull(movie);
-    }
-    [Fact]
-    public async Task GetMovieFromProviders_ShouldReturnMovieDetails_WhenProvidersReturnsValidData()
     {
         _mockApiClientFactory.Setup(factory => factory.Get<MovieDetailsDto>(It.IsAny<MovieProviderType>(), It.IsAny<string>()))
             .ReturnsAsync(
