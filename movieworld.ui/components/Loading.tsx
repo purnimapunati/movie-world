@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 const Loading = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen space-y-4">
-      {/* Animated Spinner */}
       <motion.div 
         animate={{ rotate: 360 }} 
         transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
@@ -43,7 +42,7 @@ const Loading = () => {
         </svg>
       </motion.div>
 
-      {/* Animated Text */}
+      
       <motion.p 
         className="text-lg text-primary text-center"
         initial={{ opacity: 0 }}
