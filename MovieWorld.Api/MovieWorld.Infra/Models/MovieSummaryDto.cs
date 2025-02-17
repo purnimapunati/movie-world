@@ -1,4 +1,4 @@
-﻿namespace MovieWorld.Service.Models
+﻿namespace MovieWorld.Infra.Models
 {
     public class MovieSummaryDto
     {

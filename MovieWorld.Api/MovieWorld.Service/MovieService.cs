@@ -42,7 +42,7 @@ namespace MovieWorld.Service
             }
         }
 
-        private async Task<IList<MovieDetailsDto>> GetMoviesFromProviders()
+        public async Task<IList<MovieDetailsDto>> GetMoviesFromProviders()
         {
             var movies = new List<MovieDetailsDto>();
 
@@ -68,7 +68,7 @@ namespace MovieWorld.Service
             return movies;
         }
 
-        private async Task<IList<MovieDetailsDto>> GetMoviesForProvider(MovieProviderType provider)
+        public async Task<IList<MovieDetailsDto>> GetMoviesForProvider(MovieProviderType provider)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace MovieWorld.Service
             }
         }
 
-        private async Task<List<string>> GetMovieIds(MovieProviderType movieProviderType)
+        public async Task<List<string>> GetMovieIds(MovieProviderType movieProviderType)
         {
             try
             {
@@ -99,7 +99,7 @@ namespace MovieWorld.Service
             }
         }
 
-        private async Task<MovieDetailsDto> GetMovieById(string Id, MovieProviderType movieProviderType)
+        public async Task<MovieDetailsDto> GetMovieById(string Id, MovieProviderType movieProviderType)
         {
             if (_movieCache.ContainsKey(Id) && !_movieCache[Id].IsExpired(_cacheExpiration))
             {

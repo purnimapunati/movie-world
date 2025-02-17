@@ -1,6 +1,4 @@
-﻿using MovieWorld.Service.Models;
-
-namespace MovieWorld.Infra.Models
+﻿namespace MovieWorld.Infra.Models
 {
     public class CacheItem
     {

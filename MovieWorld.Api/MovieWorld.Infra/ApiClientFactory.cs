@@ -1,9 +1,9 @@
 ﻿using Polly;
-using MovieWorld.Service.Models;
 using Microsoft.Extensions.Configuration;
 using System.Net;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Logging;
+using MovieWorld.Infra.Models;
 
 namespace MovieWorld.Infra
 {

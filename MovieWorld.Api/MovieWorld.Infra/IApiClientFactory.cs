@@ -1,4 +1,4 @@
-﻿using MovieWorld.Service.Models;
+﻿using MovieWorld.Infra.Models;
 
 namespace MovieWorld.Infra
 {
