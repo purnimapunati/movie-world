@@ -15,7 +15,7 @@ namespace MovieWorld.Api.Controllers
         }
 
         [HttpGet]
-        public Task<IList<MovieDetails>> GetWeatherDetails()
+        public Task<IList<MovieDetails>> GetMovies()
         {
             return _movieService.GetMovies();
         }

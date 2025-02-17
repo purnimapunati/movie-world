@@ -1,7 +1,7 @@
 const Loading = () => {
     return (
       <div className="flex justify-center items-center h-screen">
-        <div className="w-16 h-16 border-4 border-t-4 border-primary rounded-full animate-spin"></div>
+        <div><p className="text-lg text-primary">Hang tight! We’re fetching the best movie deals for you... Please wait.</p></div>
       </div>
     );
   };
